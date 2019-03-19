@@ -1,0 +1,31 @@
+{
+  "name": "@gs/timer",
+  "version": "1.0.1",
+  "description": "",
+  "main": "dist/timers.js",
+  "scripts": {
+    "test": "nyc -e .ts --all mocha --require ts-node/register test/**/*.ts",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/w2moon/gs-timer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/w2moon/gs-timer/issues"
+  },
+  "homepage": "https://github.com/w2moon/gs-timer#readme",
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.6",
+    "@types/node": "^11.11.3",
+    "chai": "^4.2.0",
+    "mocha": "^6.0.2",
+    "nyc": "^13.3.0",
+    "ts-node": "^8.0.3",
+    "typescript": "^3.3.3333"
+  }
+}
