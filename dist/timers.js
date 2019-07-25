@@ -183,6 +183,15 @@
         }
     }
 
+    target.cancelTimer = function(handle){
+        var timer;
+
+        if (timersByHandle.hasOwnProperty(handle)) {
+            timer = timersByHandle[handle];
+            timer.cancel = true;
+        }
+    }
+
     function restTime(handle){
         var timer;
         if(timersByHandle.hasOwnProperty(handle)){
@@ -193,7 +202,19 @@
      }
     target.restTime = restTime;
 
-    function modifyTime(handler,time){
+    function isTimerFinish(handle){
+        var timer;
+        if(timersByHandle.hasOwnProperty(handle)){
+            timer = timersByHandle[handle];
+            if(timer && !timer.cancel){
+                return false;
+            }
+        }
+        return true;
+    }
+    target.isTimerFinish = isTimerFinish;
+
+    function modifyTime(handle,time){
         var timer;
         if(timersByHandle.hasOwnProperty(handle)){
             timer = timersByHandle[handle];

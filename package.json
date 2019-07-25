@@ -1,6 +1,6 @@
 {
-  "name": "@gs/timer",
-  "version": "1.0.1",
+  "name": "gs-timer",
+  "version": "1.0.7",
   "description": "",
   "main": "dist/timers.js",
   "scripts": {
